@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="myFirstApp">
+<html ng-app='RoutingApp'>
 <head>
+  <meta charset="utf-8">
+    <script src="files/angular.min.js"></script>
+    <script src="files/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
   <link rel="stylesheet" href="stylesheet.css">
-
-<title>Assasin Creeds games </title>
+<title>Assasin's Creed Games </title>
 </head>
-<body ng-controller="MyFirstController">
-<header>
 
+<body>
+<header>
+  <div class="logo">
+  <div><img src="pics/logo3.jpg"></div>
+  </div>
 <div class="dropdown">
   <button class="dropbtn">Home</button>
 </div>
@@ -33,9 +39,11 @@
     <a href="#">Facebook</a>
     <a href="#">Twitter</a>
     <a href="#">Instagram</a>
-  </div>
-
-  </div>
+   </div>
+</div>
+<div class="dropdown">
+  <div ><input type="text" placeholder="Search"> <input type="button" value="search"></div>
+</div>
 </header>
 <aside>
 <img src="pics/logo.png"/>
@@ -82,12 +90,12 @@
 </div>
 
 <ul class="pagination">
-  <li><a href="#">«</a></li>
-  <li><a class="active" href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">»</a></li>
+  <li><a ui-sref="#">«</a></li>
+  <li><a class="active" ui-sref="#">1</a></li>
+  <li><a ui-sref="#">2</a></li>
+  <li><a ui-sref="#">3</a></li>
+  <li><a ui-sref="#">4</a></li>
+  <li><a ui-sref="#">»</a></li>
 </ul>
 
 </section>
